@@ -1,0 +1,5 @@
+{
+  "name": "eVoto - Sistema de Votação Eletrónica",
+  "description": "Aplicação de votação eletrónica segura para as eleições presidenciais, permitindo registo, votação e consulta de resultados.",
+  "requestFramePermissions": []
+}

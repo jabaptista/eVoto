@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>d3e841f3-3f3f-4fe6-8ede-543307e73419</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<SpaRoot>..\evoto.client</SpaRoot>
+		<SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
+		<SpaProxyServerUrl>https://localhost:61297</SpaProxyServerUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+			<Version>10.*-*</Version>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+		<PackageReference Include="Google.Protobuf" Version="3.27.2" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.63.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.63.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.63.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\evoto.client\evoto.client.esproj">
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+		</ProjectReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\voting.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\voter.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<SpaStaticWebAsset Include="..\evoto.client\dist\**\*" />
+	</ItemGroup>
+</Project>

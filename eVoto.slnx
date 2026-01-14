@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="Dockerfile" />
+    <File Path="evoto.client/README.md" />
+  </Folder>
+  <Project Path="evoto.client/evoto.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="eVoto.Server/eVoto.Server.csproj" />
+</Solution>
