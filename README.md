@@ -11,7 +11,7 @@ No diretório raiz da solução
 docker build -f Dockerfile -t evoto .
 
 # Executar expondo HTTP/HTTPS da app
-docker run -p 8080:8080 -p 8081:8081 evoto
+docker run -p 8080:8080 evoto
 ```
 
 ## Endpoints do Frontend
